@@ -1,0 +1,15 @@
+<div class="container my-4">
+  <div class="row">
+    <div class="col-md-6">
+      <button class="btn btn-primary">New Book</button>
+    </div>
+  </div>
+  <div class="row my-4">
+    <div class="col-md-6">
+      <app-book-items
+        *ngFor="let bookEl of books" [book]="bookEl" (bookSelected)="onBookSelected(bookEl)">
+      </app-book-items>
+    </div>
+
+  </div>
+</div>
